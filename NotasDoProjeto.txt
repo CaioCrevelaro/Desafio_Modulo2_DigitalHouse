@@ -1,0 +1,2 @@
+Largura da tela (Android Studio) ~ 410dp
+Altura da tela (Android Studio) ~ 656dp (650dp sem a toolbar)

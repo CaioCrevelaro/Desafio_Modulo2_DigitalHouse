@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="380dp"
+    android:layout_height="270dp"
+    style="@style/Theme.DigitalHouseFoods"
+    app:cardCornerRadius="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+        <ImageView
+            android:id="@+id/image_restaurant"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/tonyromas" />
+
+        <View
+            android:id="@+id/text_group"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"/>
+
+        <TextView
+            android:id="@+id/name_restaurant"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/roboto_bold"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+
+            app:layout_constraintBottom_toBottomOf="@+id/image_restaurant"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/text_group"
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="Tony Roma's"/>
+
+        <TextView
+            android:id="@+id/address_restaurant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:textColor="#8492A6"
+            android:textSize="12dp"
+            android:layout_marginLeft="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/name_restaurant"
+            tools:layout_editor_absoluteX="0dp"
+            tools:text="Av. Lavandisca, 717 - Indianópolis, São Paulo"/>
+
+        <TextView
+            android:id="@+id/closing_time_restaurant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:textColor="#8492A6"
+            android:layout_marginLeft="16dp"
+            android:textSize="12dp"
+            app:layout_constraintTop_toBottomOf="@+id/address_restaurant"
+            tools:layout_editor_absoluteX="16dp"
+            tools:text="Fecha às 22:00"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</com.google.android.material.card.MaterialCardView>
