@@ -8,7 +8,7 @@
 
     android:layout_width="380dp"
     android:layout_height="270dp"
-    
+
     app:cardCornerRadius="10dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -21,7 +21,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="fitXY"
-            android:src="@drawable/tonyromas" />
+            tools:src="@drawable/tonyromas"
+            tools:ignore="ContentDescription" />
 
         <View
             android:id="@+id/text_group"
