@@ -20,7 +20,9 @@ class RestaurantsAdapter(val restaurantsList: List<Restaurant>):RecyclerView.Ada
 
     }
 
-    override fun onBindViewHolder(holder: RestaurantsViewHolder, position: Int) {
+    override fun onBindViewHolder(
+        holder: RestaurantsViewHolder,
+        position: Int) {
 
         val image = holder.imageRestaurant
         val singleImage = restaurantsList[position].restaurantImage
@@ -43,7 +45,7 @@ class RestaurantsAdapter(val restaurantsList: List<Restaurant>):RecyclerView.Ada
 
         val card = holder.itemView
         card.setOnClickListener {
-            Log.i("CLICK", "${name.text} card was clicked")
+            Log.i("CLICK", "${name.text} was selected")
             val intent = Intent(it.context, SingleRestaurantActivity::class.java)
             intent.putExtra("IMAGE", restaurantsList[position].restaurantImage)
             intent.putExtra("NAME", restaurantsList[position].restaurantName)

@@ -1,11 +1,14 @@
 package com.br.digitalhousefoods.adapter
 
+import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.br.digitalhousefoods.R
 import com.br.digitalhousefoods.adapter.viewHolder.SingleRestaurantViewHolder
 import com.br.digitalhousefoods.model.Meal
+import com.br.digitalhousefoods.view.MealDetailActivity
 
 class SingleRestaurantAdapter(
     val mealList: List<Meal>
@@ -29,6 +32,19 @@ class SingleRestaurantAdapter(
 
         val name = holder.mealName
         name.text = mealList[position].mealName
+
+        val meal = holder.itemView
+        meal.setOnClickListener {
+            Log.i("CLICk", "${name.text} meal was selected")
+            val intent = Intent(it.context, MealDetailActivity::class.java)
+
+            intent.putExtra("NAME", mealList[position].mealName)
+            intent.putExtra("IMAGE", mealList[position].mealImage)
+            intent.putExtra("DESC", mealList[position].mealDescription)
+            intent.putExtra("PRICE", mealList[position].mealPrice)
+
+            it.context.startActivity(intent)
+        }
 
     }
 
