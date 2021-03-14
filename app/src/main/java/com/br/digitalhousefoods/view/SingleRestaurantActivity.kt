@@ -6,6 +6,7 @@ import android.util.Log
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.br.digitalhousefoods.R
+import com.br.digitalhousefoods.adapter.SingleRestaurantAdapter
 import com.br.digitalhousefoods.data.Data
 import com.br.digitalhousefoods.model.Restaurant
 
@@ -25,7 +26,7 @@ class SingleRestaurantActivity : AppCompatActivity() {
 
 
         single_restaurant_recycler_view.layoutManager = GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false)
-        single_restaurant_recycler_view.adapter = SingleRestaurantActivity(mealList)
+        single_restaurant_recycler_view.adapter = mealList?.let { SingleRestaurantAdapter(it) }
 
 
 

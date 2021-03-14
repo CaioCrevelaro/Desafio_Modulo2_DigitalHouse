@@ -22,7 +22,6 @@ class RestaurantsAdapter(val restaurantsList: List<Restaurant>):RecyclerView.Ada
 
     override fun onBindViewHolder(holder: RestaurantsViewHolder, position: Int) {
 
-
         val image = holder.imageRestaurant
         val singleImage = restaurantsList[position].restaurantImage
         image.setImageResource(restaurantsList[position].restaurantImage)

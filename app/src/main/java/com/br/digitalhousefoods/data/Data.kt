@@ -4,12 +4,6 @@ import com.br.digitalhousefoods.R
 import com.br.digitalhousefoods.model.Meal
 import com.br.digitalhousefoods.model.Restaurant
 
-val MEAL = Meal(
-    "Salada com molho Gengibre ",
-    "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusant doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis.",
-    R.drawable.meal,
-    49.90)
-
 public object Data {
 
     fun data(): List<Restaurant>{
