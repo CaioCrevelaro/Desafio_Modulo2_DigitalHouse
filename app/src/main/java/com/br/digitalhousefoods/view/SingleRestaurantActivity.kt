@@ -3,6 +3,8 @@ package com.br.digitalhousefoods.view
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.br.digitalhousefoods.R
@@ -16,10 +18,16 @@ class SingleRestaurantActivity : AppCompatActivity() {
         setContentView(R.layout.activity_single_restaurant)
 
         val single_restaurant_recycler_view by lazy { findViewById<RecyclerView>(R.id.single_restaurant_recycler_view) }
+        val single_restaurant_image by lazy { findViewById<ImageView>(R.id.single_restaurant_image) }
+        val single_restaurant_name by lazy { findViewById<TextView>(R.id.single_restaurant_name) }
 
         val restaurant = intent.extras
         val name = restaurant?.getString("NAME")
         val image = restaurant?.getInt("IMAGE")
+
+        image?.let { single_restaurant_image.setImageResource(it) }
+        single_restaurant_name.text = name!!
+
 
         val resObject = Data.data().find { it.restaurantName.equals(name)}
         val mealList = resObject?.restaurantMenu

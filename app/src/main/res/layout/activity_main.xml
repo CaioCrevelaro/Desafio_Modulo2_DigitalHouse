@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
 
     android:orientation="vertical"
-
-    android:paddingRight="10dp"
-    android:paddingLeft="10dp"
 
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -13,12 +10,25 @@
     tools:context=".view.MainActivity"
     android:background="#DDDDDD">
 
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="Digital House Foods"
+        app:titleTextColor="#FFFFFF"
+        android:background="#3F51B5"/>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/main_activity_recycler_view"
-        android:layout_width="fill_parent"
+
+        android:layout_gravity="center_horizontal"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
 
     </androidx.recyclerview.widget.RecyclerView>
 
-</RelativeLayout>
+</LinearLayout>

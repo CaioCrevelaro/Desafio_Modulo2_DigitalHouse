@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
 import com.br.digitalhousefoods.R
-import org.w3c.dom.Text
+
 
 class MealDetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

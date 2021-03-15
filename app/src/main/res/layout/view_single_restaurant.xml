@@ -6,10 +6,14 @@
     android:layout_marginTop="10dp"
     android:layout_marginBottom="10dp"
 
-    android:layout_width="380dp"
-    android:layout_height="270dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
 
-    app:cardCornerRadius="10dp">
+    android:layout_width="match_parent"
+    android:layout_height="240dp"
+
+    app:cardCornerRadius="10dp"
+    android:background="@drawable/meal">
 
     <androidx.constraintlayout.widget.ConstraintLayout
 
@@ -19,39 +23,36 @@
         <ImageView
             android:id="@+id/meal_image"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="fitXY"
-            tools:src="@drawable/tonyromas"
-            tools:ignore="ContentDescription" />
-
-        <View
-            android:id="@+id/meal_text_group"
-            android:layout_width="match_parent"
-            android:layout_height="90dp"
-            android:background="@color/white"
+            android:layout_height="wrap_content"
+            android:scaleType="fitStart"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0"/>
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/meal" />
+
 
         <TextView
             android:id="@+id/meal_name"
             android:layout_width="match_parent"
 
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
+            android:background="@color/white"
 
-            android:layout_marginTop="12dp"
-            android:layout_marginBottom="36dp"
             android:fontFamily="@font/roboto_bold"
+            android:gravity="center_horizontal"
+
             android:textColor="@color/black"
 
-            android:textSize="30dp"
+            android:textSize="24sp"
+
             app:layout_constraintBottom_toBottomOf="@+id/meal_image"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/text_group"
-            app:layout_constraintVertical_bias="0.0"
-            tools:text="Tony Roma's" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.826"
+            tools:text="Salada com Molho de Gengibre" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
