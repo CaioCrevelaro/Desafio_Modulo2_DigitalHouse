@@ -23,6 +23,21 @@
             tools:layout_editor_absoluteY="0dp"
             tools:src="@drawable/tonyromas" />
 
+        <ImageButton
+            android:id="@+id/restaurant_back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:background="@android:color/transparent"
+            app:layout_constraintBottom_toTopOf="@+id/single_restaurant_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.041"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.113"
+
+            />
+
         <TextView
             android:id="@+id/single_restaurant_name"
             android:layout_width="match_parent"
